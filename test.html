@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        $(window).on("scroll", function() {
+            var top = $(this).scrollTop();
+            console.log(top);
+            if (top >= 530) {
+                $("#nav li").removeClass("active");
+                $("#nav li").filter(":nth-child(2)").addClass("active");
+            }
+        });
+    </script>
+    <style>
+        body {
+            position: relative;
+        }
+
+        #about {
+            padding-top: 50px;
+            height: 500px;
+            color: #fff;
+            background-color: #1E88E5;
+        }
+
+        #portfolio {
+            padding-top: 50px;
+            height: 500px;
+            color: #fff;
+            background-color: #673ab7;
+        }
+
+        #aboutme {
+            padding-top: 50px;
+            height: 500px;
+            color: #fff;
+            background-color: #ff9800;
+        }
+
+        #skill {
+            padding-top: 50px;
+            height: 500px;
+            color: #fff;
+            background-color: #00bcd4;
+        }
+
+        #contact {
+            padding-top: 50px;
+            height: 500px;
+            color: #fff;
+            background-color: #009688;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target=".classy-navbar" data-offset="50">
+    <!-- Header Area Start -->
+    <header class="header-area">
+        <div class="classy-nav-container breakpoint-off">
+            <div class="container">
+                <!-- Classy Menu -->
+                <nav class="classy-navbar justify-content-between" id="conferNav">
+
+                    <!-- Logo -->
+                    <a class="nav-brand" href="#home" id="rlogo">
+                        <h4 style="color: white;" class="wow hinge">Yang's PortFolio</h4>
+                    </a>
+
+                    <!-- Navbar Toggler -->
+                    <div class="classy-navbar-toggler">
+                        <span class="navbarToggler"><span></span><span></span><span></span></span>
+                    </div>
+
+                    <!-- Menu -->
+                    <div class="classy-menu">
+                        <!-- Menu Close Button -->
+                        <div class="classycloseIcon">
+                            <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                        </div>
+                        <!-- Nav Start -->
+                        <div class="classynav">
+                            <ul id="nav">
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">introduce</a>
+                                    <!--
+                                    <ul class="dropdown">
+                                        <li><a href="index.html">- Home</a></li>
+                                        <li><a href="about.html">- About Us</a></li>
+                                        <li><a href="speakers.html">- Speakears</a></li>
+                                        <li><a href="schedule.html">- Schedule</a></li>
+                                        <li><a href="tickets.html">- Tickets</a></li>
+                                        <li><a href="blog.html">- Blog</a></li>
+                                        <li><a href="single-blog.html">- Single Blog</a></li>
+                                        <li><a href="contact.html">- Contact</a></li>
+                                        <li><a href="#">- Dropdown</a>
+                                            <ul class="dropdown">
+                                                <li><a href="#">- Dropdown Item</a></li>
+                                                <li><a href="#">- Dropdown Item</a></li>
+                                                <li><a href="#">- Dropdown Item</a></li>
+                                                <li><a href="#">- Dropdown Item</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+-->
+                                </li>
+                                <li><a href="#portfolio">portfolio</a></li>
+                                <li><a href="#aboutme">about me</a></li>
+                                <li><a href="#skill">SKILL</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+
+                            <!-- Get Tickets Button -->
+                            <!--                            <a href="#" class="btn confer-btn mt-3 mt-lg-0 ml-3 ml-lg-5">Get Tickets <i class="zmdi zmdi-long-arrow-right"></i></a>-->
+                        </div>
+                        <!-- Nav End -->
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <div id="about" class="container-fluid">
+        <h1>Section 1</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    </div>
+    <div id="portfolio" class="container-fluid">
+        <h1>Section 2</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    </div>
+    <div id="aboutme" class="container-fluid">
+        <h1>Section 3</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    </div>
+    <div id="skill" class="container-fluid">
+        <h1>Section 4 Submenu 1</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    </div>
+    <div id="contact" class="container-fluid">
+        <h1>Section 4 Submenu 2</h1>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+        <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+    </div>
+
+</body>
+</html>
