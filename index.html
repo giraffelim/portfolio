@@ -45,6 +45,26 @@
             margin-left: 15px;
         }
     </style>
+    
+     <script>
+        window.onload = function() {
+            var screenW = screen.availWidth; // 스크린 가로사이즈
+            var screenH = screen.availHeight; // 스크린 세로사이즈
+            var popW = 600; // 띄울창의 가로사이즈
+            var popH = 600; // 띄울창의 세로사이즈
+            var posL = (screenW - popW) / 2; // 띄울창의 가로 포지션 
+            var posT = (screenH - popH) / 2; // 띄울창의 세로 포지션
+
+
+            document.getElementById("movieGo").onclick = function() {
+                goFuction()
+            };
+
+            function goFuction() {
+                window.open('http://tyang.dothome.co.kr/Movie', 'test', 'width=' + popW + ',height=' + popH + ',top=' + posT + ',left=' + posL);
+            }
+        }
+    </script>
 
 </head>
 
@@ -159,7 +179,8 @@
                     <div class="about-content-text mb-80">
                         <h6 class="wow fadeInLeftBig" data-wow-delay="300ms">MY STORY</h6>
                         <h3 class="wow fadeInLeftBig" data-wow-delay="300ms">Welcome to the My PortFolio</h3>
-                        <p class="wow fadeInLeftBig" data-wow-delay="300ms">I'm 23 years old and i'm student for tis edu.</p>
+                        <p class="wow fadeInLeftBig" data-wow-delay="300ms">T자형 인간이 되길 희망하고, <br>
+                        호기심이 많고 열정이 가득한 초보 개발자 임태양 입니다.</p>
                         <a href="#" class="btn confer-btn mt-50 wow fadeInUp" data-wow-delay="300ms">Interested <i class="zmdi zmdi-long-arrow-right"></i></a>
                     </div>
                 </div>
@@ -246,7 +267,7 @@
                         <!-- Social Info -->
                         <div class="social-info">
                             <a href="#" data-toggle="modal" data-target="#movieModal"><i class="zmdi zmdi-group"></i></a>
-                            <a href="http://tyang.dothome.co.kr/Movie" target="_blank"><i class="zmdi zmdi-8tracks"></i></a>
+                            <a href="http://tyang.dothome.co.kr/Movie" onClick="var s=window.open(this.href,'movie','width=700, height=800');s.moveTo(x,y);"><i class="zmdi zmdi-8tracks"></i></a>
                         </div>
 
 
@@ -488,7 +509,7 @@
                     </p>
                     <hr>
                     <strong class="jejuFont">구경하러 가기</strong>
-                    <a href="http://tyang.dothome.co.kr/Movie" class="btn btn-warning" target="_blank" style="margin-left: 10px;">GO</a>
+                    <a href="#" class="btn btn-warning" target="_blank" style="margin-left: 10px;" id="movieGo">GO</a>
                 </div>
                 <div class="modal-footer" style="background: black;">
                     <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
@@ -573,11 +594,11 @@
                         <strong>Google Map API</strong>를 이용한 지도 표기 <br>
                         <strong>그누보드</strong>를 이용한 시승문의(게시판) 구현
                         <br>
-                        <strong>Ajax</strong>를 이용한 비동기 데이터 수신
+                        <strong>Ajax</strong>를 이용한 비동기 데이터 수신 (뉴스 및 이벤트) <strong style="color: red;">클릭!</strong>
                     </p>
                     <hr>
                     <strong class="jejuFont">구경하러 가기</strong>
-                    <a href="http://tyang.dothome.co.kr/benz" class="btn btn-warning" target="_blank" style="margin-left: 10px;">GO</a>
+                    <a href="http://tyang.dothome.co.kr/benz" class="btn btn-warning" target="_blank" style="margin-left: 10px;">GO</a> <br>
                 </div>
                 <div class="modal-footer" style="background: black;">
                     <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
@@ -1741,6 +1762,7 @@
                     $('.classy-navbar-toggler').click(); //bootstrap 3.x     
                 }
             });
+            
 
             $("#nav a, #rlogo, #infoBtn").on('click', function(event) {
 
